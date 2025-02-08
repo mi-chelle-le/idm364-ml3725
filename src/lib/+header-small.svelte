@@ -24,20 +24,16 @@
             </a>
         </div>
     </nav>
-    <div class="header-title">
-        <h1>Hirono</h1>
-        <h3>Figurine collectables</h3>
-    </div>
 </header>
 
 <style>
     header {
-        background-image: url('./assets/imgs/home-header.jpg');
+        background-image: url('./assets/imgs/header.jpg');
         background-size: 100% auto;
         background-repeat: no-repeat;
         color: white;
         height: 100%;
-        padding-bottom: 10rem;
+        padding-bottom: 5rem;
     }
 
     nav {
@@ -79,24 +75,5 @@
 
     .logo img {
         width: 7rem;
-    }
-
-    .header-title {
-        width: 100%;
-    }
-
-    .header-title h1 {
-        font-size: 8rem;
-        text-align: center;
-        line-height: 0;
-        padding-top: 4rem;
-        text-shadow: 8px 8px 0px #000;
-    }
-
-    .header-title h3 {
-        font-size: 2.5rem;
-        text-align: center;
-        text-shadow: 4px 4px 0px #000;
-        font-weight: 400;
     }
 </style>

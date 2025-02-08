@@ -1,4 +1,28 @@
-body {
-    font-family: sans-serif;
-    background: pink;
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+.root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend Deca", sans-serif;
+
+}
+
+h1, h2, h3 {
+    font-family: "Jua", sans-serif;
+}
+
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 50%;
+    gap: 2rem;
+    margin: 2rem;
 }
