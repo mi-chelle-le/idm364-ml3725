@@ -3,8 +3,17 @@
   import { createEventDispatcher } from 'svelte';
   import { goto } from '$app/navigation'; 
   import { page } from '$app/stores';
+  import { onMount } from "svelte";
 
-$: id = $page.params.id;
+  export let data;
+
+  $: product = data.product;
+  $: id = $page.params.id;
+
+  onMount(() => {
+  console.log("Page params:", $page.params);
+  console.log("Product data:", product);
+});
 
   const dispatch = createEventDispatcher();
   
@@ -49,6 +58,8 @@ $: id = $page.params.id;
   function goBack() {
     window.history.back();
   }
+
+  // export let product;
  </script>
  <div class="product-page-main">
  <div class="product-page">
@@ -56,16 +67,17 @@ $: id = $page.params.id;
      <button on:click={goBack}>← Back</button>
    </div>
    
+   {#if product}
    <div class="product">
      <div class="product-img">
-       <img src={ProductIMG} alt="Cuckoo figurine from The Other One Series">
+       <img src="../../hirono/{product.IMG}" alt={product.Name} />
      </div>
-     
+
      <div class="product-info">
        <div class="product-details">
-         <p class="series">The Other One Series</p>
-         <h3 class="title">Cuckoo</h3>
-         <h2 class="price">$15.99</h2>
+         <p class="series">{product.Series}</p>
+         <h3 class="title">{product.Name}</h3>
+         <h2 class="price">{product.Price}</h2>
          <p class="description">This collectible figurine features intricate details and premium finish, making it a perfect addition to any collection.</p>
        </div>
        
@@ -109,6 +121,9 @@ $: id = $page.params.id;
        </div>
      </div>
    </div>
+   {:else}
+   <p>No product found</p>
+   {/if}
  </div>
 </div>
  
@@ -122,8 +137,8 @@ $: id = $page.params.id;
 
    .product-page {
      max-width: 1000px;
-     margin: 2rem auto;
-     padding: 2rem;
+     margin: 0 auto 2rem auto;
+     padding: 0.5rem 2rem 2rem 2rem;
    }
    
    .back-button {
@@ -282,6 +297,7 @@ $: id = $page.params.id;
    @media (max-width: 768px) {
      .product {
        flex-direction: column;
+       gap: 2rem;
      }
      
      .product-img,
