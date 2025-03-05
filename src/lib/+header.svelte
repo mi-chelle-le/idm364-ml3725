@@ -2,6 +2,7 @@
     import HironoLogo from "$lib/assets/icons/hirono-logo.svg";
     import ShoppingBag from "$lib/assets/icons/shopping-bag.svg";
     import { link } from '$app/navigation';
+    import styles from "../styles.css";
 </script>
 
 <header>
@@ -11,41 +12,40 @@
                 <img src={HironoLogo} alt="Hirono Logo"/>
             </a>
         </div>
-        <div class="menu">
+        <!-- <div class="menu">
             <ul>
                 <li><a href="/shop" use:link>shop</a></li>
                 <li><a href="/about" use:link>about</a></li>
                 <li><a href="/contact" use:link>contact</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="shopping-bag">
             <a href="/cart" use:link>
                <img src={ShoppingBag} alt="Shopping Bag"/>
             </a>
         </div>
     </nav>
-    <div class="header-title">
-        <h1>Hirono</h1>
-        <h3>Figurine collectables</h3>
-    </div>
 </header>
 
 <style>
     header {
-        background-image: url('./assets/imgs/home-header.jpg');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        color: white;
-        height: 100%;
-        padding-bottom: 10rem;
+        background-color: #737E6F;
+        margin: 2rem;
+        border-radius: 2rem;
+        border: 0.25rem solid black;
+        box-shadow: 4px 4px 0px 0px #000;
+        position: sticky; 
+        /* top: 2rem;       
+        z-index: 1000;    */
     }
 
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 1.5rem;
     }
+
 
     .menu ul {
         display: flex;
@@ -79,24 +79,5 @@
 
     .logo img {
         width: 7rem;
-    }
-
-    .header-title {
-        width: 100%;
-    }
-
-    .header-title h1 {
-        font-size: 8rem;
-        text-align: center;
-        line-height: 0;
-        padding-top: 4rem;
-        text-shadow: 8px 8px 0px #000;
-    }
-
-    .header-title h3 {
-        font-size: 2.5rem;
-        text-align: center;
-        text-shadow: 4px 4px 0px #000;
-        font-weight: 400;
     }
 </style>

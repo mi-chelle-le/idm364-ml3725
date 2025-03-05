@@ -1,0 +1,84 @@
+﻿id,Name,Series,Special,Price,IMG
+1,Vagrancy,The Other One,,$15.99 ,the-other-one/vagrancy.jpg
+2,Cuckoo,The Other One,,$15.99 ,the-other-one/cuckoo.jpg
+3,The Ghost,The Other One,,$15.99 ,the-other-one/the-ghost.jpg
+4,Nowhere Safe,The Other One,,$15.99 ,the-other-one/nowhere-safe.jpg
+5,Raving,The Other One,,$15.99 ,the-other-one/raving.jpg
+6,Being Alive,The Other One,,$15.99 ,the-other-one/being-alive.jpg
+7,The Monster,The Other One,,$15.99 ,the-other-one/the-monster.jpg
+8,Amnesia,The Other One,,$15.99 ,the-other-one/amnesia.jpg
+9,The Crow,The Other One,,$15.99 ,the-other-one/the-crow.jpg
+10,The Fox,The Other One,,$15.99 ,the-other-one/the-fox.jpg
+11,Staring,The Other One,,$15.99 ,the-other-one/staring.jpg
+12,Marionette,The Other One,,$15.99 ,the-other-one/marionette.jpg
+13,Dreaming,The Other One,TRUE,$32.99 ,the-other-one/dreaming.jpg
+14,Loose Fish,Little Mischief,,$15.99 ,little-mischief/loose-fish.jpg
+15,Manacle,Little Mischief,,$15.99 ,little-mischief/manacle.jpg
+16,The Aviator,Little Mischief,,$15.99 ,little-mischief/the-aviator.jpg
+17,Protector,Little Mischief,,$15.99 ,little-mischief/protector.jpg
+18,Persona,Little Mischief,,$15.99 ,little-mischief/persona.jpg
+19,Robot,Little Mischief,,$15.99 ,little-mischief/robot.jpg
+20,Birdman,Little Mischief,,$15.99 ,little-mischief/birdman.jpg
+21,Ragpicker,Little Mischief,,$15.99 ,little-mischief/ragpicker.jpg
+22,Destroyer,Little Mischief,,$15.99 ,little-mischief/destroyer.jpg
+23,Boiling Frog,Little Mischief,,$15.99 ,little-mischief/boiling-frog.jpg
+24,Float,Little Mischief,,$15.99 ,little-mischief/float.jpg
+25,Pretender,Little Mischief,,$15.99 ,little-mischief/pretender.jpg
+26,Unknown Journey,Little Mischief,TRUE,$32.99 ,little-mischief/unknown-journey.jpg
+27,Guardian,MIME,,$15.99 ,mime/guardian.jpg
+28,Blind,MIME,,$15.99 ,mime/blind.jpg
+29,Seeker,MIME,,$15.99 ,mime/seeker.jpg
+30,Devilry,MIME,,$15.99 ,mime/devilry.jpg
+31,Drifter,MIME,,$15.99 ,mime/drifter.jpg
+32,Fool,MIME,,$15.99 ,mime/fool.jpg
+33,Unspoken,MIME,,$15.99 ,mime/unspoken.jpg
+34,Patience,MIME,,$15.99 ,mime/patience.jpg
+35,Prison,MIME,,$15.99 ,mime/prison.jpg
+36,Destroy,MIME,,$15.99 ,mime/destroy.jpg
+37,Poem,MIME,,$15.99 ,mime/poem.jpg
+38,Secrecy,MIME,,$15.99 ,mime/secrecy.jpg
+39,Silent,MIME,TRUE,$32.99 ,mime/silent.jpg
+40,Burst,Reshape,,$15.99 ,reshape/burst.jpg
+41,Woodcarving,Reshape,,$15.99 ,reshape/woodcarving.jpg
+42,Fading,Reshape,,$15.99 ,reshape/fading.jpg
+43,Healing,Reshape,,$15.99 ,reshape/healing.jpg
+44,Paradise Lost,Reshape,,$15.99 ,reshape/paradise-lost.jpg
+45,Drowning,Reshape,,$15.99 ,reshape/drowning.jpg
+46,Costume,Reshape,,$15.99 ,reshape/costume.jpg
+47,Parasite,Reshape,,$15.99 ,reshape/parasite.jpg
+48,Voyage,Reshape,,$15.99 ,reshape/voyage.jpg
+49,Puppet,Reshape,TRUE,$32.99 ,reshape/puppet.jpg
+50,Circus,Shelter,,$16.99 ,shelter/circus.jpg
+51,Fort,Shelter,,$16.99 ,shelter/fort.jpg
+52,Cabin,Shelter,,$16.99 ,shelter/cabin.jpg
+53,Mantel Clock,Shelter,,$16.99 ,shelter/mantel-clock.jpg
+54,Warrior,Shelter,,$16.99 ,shelter/warrior.jpg
+55,Poet,Shelter,,$16.99 ,shelter/poet.jpg
+56,Alien,Shelter,,$16.99 ,shelter/alien.jpg
+57,Sunny Doll,Shelter,,$16.99 ,shelter/sunny-doll.jpg
+58,Bird Cage,Shelter,,$16.99 ,shelter/bird-cage.jpg
+59,Traffic Cone,Shelter,,$16.99 ,shelter/traffic-cone.jpg
+60,Birdy,Shelter,,$16.99 ,shelter/birdy.jpg
+61,Candleholder,Shelter,,$16.99 ,shelter/candleholder.jpg
+62,Stuffed Bear,Shelter,TRUE,$34.99 ,shelter/stuffed-bear.jpg
+63,The Little Prince,Le Petit Prince,,$16.99 ,le-petit-prince/the-little-prince.jpg
+64,The Rose,Le Petit Prince,,$16.99 ,le-petit-prince/the-rose.jpg
+65,The Geographer,Le Petit Prince,,$16.99 ,le-petit-prince/the-geographer.jpg
+66,The Businessman,Le Petit Prince,,$16.99 ,le-petit-prince/the-businessman.jpg
+67,The Tippler,Le Petit Prince,,$16.99 ,le-petit-prince/the-tippler.jpg
+68,The Conceited Man,Le Petit Prince,,$16.99 ,le-petit-prince/the-conceited-man.jpg
+69,The Fox,Le Petit Prince,,$16.99 ,le-petit-prince/the-fox.jpg
+70,The Merchant,Le Petit Prince,,$16.99 ,le-petit-prince/the-merchant.jpg
+71,The Switchman,Le Petit Prince,,$16.99 ,le-petit-prince/the-switchman.jpg
+72,The Lamplighter,Le Petit Prince,,$16.99 ,le-petit-prince/the-lamplighter.jpg
+73,The Snake,Le Petit Prince,,$16.99 ,le-petit-prince/the-snake.jpg
+74,The Pilot,Le Petit Prince,,$16.99 ,le-petit-prince/the-pilot.jpg
+75,The Little Prince (Special Edition),Le Petit Prince,TRUE,$34.99 ,le-petit-prince/the-little-prince-special.jpg
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

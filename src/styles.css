@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 .root {
+    --brown: #653921;
+    --orange: #E46F20;
+    --green: #737E6F;
+    --charcoal: #3C3C3C;
+
+
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,6 +18,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: "Lexend Deca", sans-serif;
+    background-color: #FFF8F2;
+    scroll-behavior: smooth;
 
 }
 
@@ -19,10 +28,8 @@ h1, h2, h3 {
 }
 
 
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 50%;
-    gap: 2rem;
-    margin: 2rem;
+h1 {
+    color: white;
+    font-size: 56px;
+    text-align: center;
 }

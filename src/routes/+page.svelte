@@ -1,41 +1,134 @@
 <script>
     import HironoCard from "$lib/+hirono-card.svelte";
-    import Product1 from "$lib/assets/imgs/hirono/vagrancy.jpg"
-    import Product2 from "$lib/assets/imgs/hirono/cuckoo.jpg"
-    import Product3 from "$lib/assets/imgs/hirono/theghost.jpg"
-    import Product4 from "$lib/assets/imgs/hirono/nowheresafe.jpg"
-</script>
-<svelte:head>
-    <title>Hirono</title>
-</svelte:head>
-<div class="main-content">
-<div class="product-container">
-    <HironoCard
-        image="{Product1}"
-        series="The Other One Series"
-        title="Vagrancy"
-        price="$16.99"
-    />
-    <HironoCard
-        image="{Product2}"
-        series="The Other One Series"
-        title="Cuckoo"
-        price="$16.99"
-        showSpecialTag={true};
-    />
-    <HironoCard
-        image="{Product3}"
-        series="The Other One Series"
-        title="The Ghost"
-        price="$16.99"
-    />
-    <HironoCard
-        image="{Product4}"
-        series="The Other One Series"
-        title="Nowhere Safe"
-        price="$16.99"
-    />
-</div>
-</div>
-<!-- <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p> -->
+    import HeaderIMG1 from "$lib/assets/imgs/header-hirono1.png";
+    import HeaderIMG2 from "$lib/assets/imgs/header-hirono2.png";
+    import Filter from "$lib/+filter.svelte";
+  
+    const { data } = $props();
+  
+    const seriesList = ["The Other One", "Little Mischief", "MIME", "Reshape", "Shelter", "Le Petit Prince"];
+  </script>
+  
+  <svelte:head>
+    <title>Hirono Shop</title>
+  </svelte:head>
+  
+  <div class="main-content">
+    <div class="header-container">
+      <div class="header-content">
+        <img src={HeaderIMG1} />
+        <div class="header-title">
+          <h1>Hirono</h1>
+          <h3>Figurine Collectibles</h3>
+        </div>
+        <img src={HeaderIMG2} />
+      </div>
+    </div>
+  
+    <div class="shop">
+      <Filter />
+  
+      <div class="products">
+        {#each seriesList as series}
+          {#if data?.products?.some(p => p.Series === series)}
+            <div class="product-section">
+            <h2 id={series.replace(/\s+/g, "-")}>{series}</h2>
+              <div class="product-container">
+                {#each data.products.filter(p => p.Series === series) as product}
+                  <HironoCard
+                    href="/product/{product.id}"
+                    image="../hirono/{product.IMG}"
+                    series={product.Series}
+                    title={product.Name}
+                    price={product.Price}
+                    showSpecialTag={product.Special}
+                  />
+                {/each}
+              </div>
+            </div>
+          {/if}
+        {/each}
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 5rem;
+    }
+  
+    .header-container img {
+      max-width: 300px;
+    }
+  
+    .header-title h1 {
+      font-size: 8rem;
+      color: black;
+      text-align: center;
+      line-height: 0;
+      padding-top: 4rem;
+    }
+  
+    .header-title h3 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+    }
+  
+    .shop {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      margin: 4rem 0;
+    }
+  
+    .product-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  
+    .product-section h2 {
+      font-size: 2rem;
+    }
+  
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 1290px) {
+     .product-container {
+        grid-template-columns: repeat(3, 1fr);
+     }
+   }
+
+   @media (max-width: 1080px) {
+     .shop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+     }
+
+   }
+
+   @media (max-width: 784px) {
+     .product-container {
+        grid-template-columns: repeat(2, 1fr);
+     }
+   }
+
+   @media (max-width: 520px) {
+     .product-container {
+        display: flex;
+        flex-direction: column;
+     }
+   }
+
+  </style>

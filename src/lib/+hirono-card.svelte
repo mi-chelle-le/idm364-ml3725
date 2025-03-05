@@ -14,7 +14,9 @@
                 <h3>SPECIAL</h3>
             </div>
         {/if}
+        <div class="card-img-container">
         <img src={image} alt={title} class="card-image" />
+        </div>
         <div class="card-content">
             <p class="card-subtitle">{series}</p>
             <h4 class="card-title">{title}</h4>
@@ -34,21 +36,27 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         width: 216px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        border: 4px solid black;
         transition: transform 0.2s, box-shadow 0.2s;
         cursor: pointer;
-        border: 16px solid #FFF;
+        background-color: white;
     }
 
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px 0px #000;
+    }
+
+    .card-img-container {
+        border-bottom: 4px solid black;
     }
 
     .card-image {
         width: 100%;
         height: 200px;
         object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
     }
 
     .card-content {
@@ -56,20 +64,23 @@
     }
 
     .card-subtitle {
-        font-size: 0.9rem;
-        color: #666;
+        font-size: 1rem;
+        color: #737E6F;
+        font-weight: 500;
         margin: 0 0 0.5rem 0;
     }
 
     .card-title {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin: 0 0 0.5rem 0;
+        font-family: "Jua", sans-serif;
     }
 
     .card-price {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         font-weight: bold;
-        color: #333;
+        color: black;
+        font-family: "Jua", sans-serif;
         margin: 0;
     }
 
@@ -83,15 +94,25 @@
         height: 32px;
         color: white;
         border-radius: 24px;
-        border: 3px solid #FFF;
+        border: 3px solid black;
         background: #E46F20;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 4px 0px 0px #000;
         position: absolute;
-        margin-left: 9rem;
+        margin-left: 8rem;
         margin-top: -1rem;
     }
 
     .special-tag h3 {
         font-weight: 400;
+    }
+
+    @media (max-width: 520px) {
+     .card {
+        width: 280px;
+     }
+
+     .special-tag {
+        margin-left: 12rem;
+     }
     }
 </style>

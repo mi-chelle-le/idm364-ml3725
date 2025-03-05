@@ -4,16 +4,14 @@
 
 <style>
     footer {
-        background-image: url('./assets/imgs/footer.jpg');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
+        background-color: #737E6F;
         color: white;
-        height: 100%;
-        padding-top: 5rem;
+        padding: 1rem;
+        border-top: 4px solid black;
     }
 
     footer h3 {
-        margin: 0 2rem 2rem 2rem;
+        font-size: 1.25rem;
     }
 
 </style>
