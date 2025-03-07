@@ -4,67 +4,63 @@
   import { goto } from '$app/navigation'; 
   import { page } from '$app/stores';
   import { onMount } from "svelte";
+  import QuantityAdjuster from "$lib/+quantity-adjuster.svelte";
 
   export let data;
 
   $: product = data.product;
   $: id = $page.params.id;
+  
+  // Add a local variable to store quantity
+  let quantity = 1;
 
   onMount(() => {
-  console.log("Page params:", $page.params);
-  console.log("Product data:", product);
-});
+    console.log("Page params:", $page.params);
+    console.log("Product data:", product);
+  });
 
   const dispatch = createEventDispatcher();
   
-  export let quantity = 1;
-  export let min = 1;
-  export let max = 9;
+// Update the addToBag function to store product info and redirect
+function addToBag() {
+  if (!product) return;
   
-  function increment() {
-    if (quantity < max) {
-      quantity += 1;
-      dispatch('change', quantity);
-    }
+  // Create an order item with product details
+  const orderItem = {
+    id: id,
+    product: product,
+    quantity: quantity,
+    timestamp: new Date().toISOString()
+  };
+  
+  // Get existing cart from localStorage or initialize empty array
+  const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
+  
+  // Check if product already exists in cart
+  const existingItemIndex = existingCart.findIndex(item => item.id === id);
+  
+  if (existingItemIndex >= 0) {
+    // Update quantity if product already in cart
+    existingCart[existingItemIndex].quantity += quantity;
+  } else {
+    // Add new item to cart
+    existingCart.push(orderItem);
   }
   
-  function decrement() {
-    if (quantity > min) {
-      quantity -= 1;
-      dispatch('change', quantity);
-    }
-  }
+  // Save updated cart back to localStorage
+  localStorage.setItem('cart', JSON.stringify(existingCart));
   
-  function handleInputChange(event) {
-    let value = parseInt(event.target.value);
-    
-    if (isNaN(value)) {
-      value = min;
-    } else {
-      value = Math.max(min, Math.min(max, value));
-    }
-    
+  console.log(`Added ${quantity} item(s) of ${product.Name} to bag`);
+  
+  // Remove the alert and redirect to cart page instead
+  goto('/cart'); // Redirect to the cart page
+}
+</script>
 
-    quantity = value;
-    dispatch('change', quantity);
-  }
-  
-  function addToBag() {
-    console.log(`Adding ${quantity} item(s) to bag`);
-    alert(`${quantity} item(s) added to your bag!`);
-  }
-  
-  // Go back to previous page
-  function goBack() {
-    window.history.back();
-  }
-
-  // export let product;
- </script>
  <div class="product-page-main">
  <div class="product-page">
    <div class="back-button">
-     <button on:click={goBack}>← Back</button>
+     <a href="/"><button>← Back</button></a>
    </div>
    
    {#if product}
@@ -85,33 +81,7 @@
           <div class="quantity-section">
               <p>Quantity</p>
          <div class="quantity-adjuster">
-           <button
-             class="quantity-btn decrement"
-             on:click={decrement}
-             disabled={quantity <= min}
-             aria-label="Decrease quantity"
-           >
-             <span>−</span>
-           </button>
-           
-           <input
-             type="number"
-             class="quantity-input"
-             bind:value={quantity}
-             on:change={handleInputChange}
-             min={min}
-             max={max}
-             aria-label="Quantity"
-           />
-           
-           <button
-             class="quantity-btn increment"
-             on:click={increment}
-             disabled={quantity >= max}
-             aria-label="Increase quantity"
-           >
-             <span>+</span>
-           </button>
+          <QuantityAdjuster bind:value={quantity}/>
          </div>
       </div>
          
@@ -231,47 +201,7 @@
      border-radius: 8px;
      overflow: hidden;
      width: fit-content;
-   }
-   
-   .quantity-btn {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 36px;
-     height: 36px;
-     background: none;
-     border: none;
-     cursor: pointer;
-     font-size: 18px;
-     color: #333;
-     transition: background-color 0.2s;
-   }
-   
-   .quantity-btn:hover:not(:disabled) {
-     background-color: #E46F20;
-     color: white;
-   }
-   
-   .quantity-btn:disabled {
-     color: #ccc;
-     cursor: not-allowed;
-   }
-   
-   .quantity-input {
-     width: 40px;
-     height: 36px;
-     border: none;
-     border-left: 3px solid black;
-     border-right: 3px solid black;
-     text-align: center;
-     font-size: 14px;
-     -moz-appearance: textfield; 
-   }
-   
-   .quantity-input::-webkit-outer-spin-button,
-   .quantity-input::-webkit-inner-spin-button {
-     -webkit-appearance: none;
-     margin: 0;
+     background-color: white;
    }
    
    .add-to-bag-button {
