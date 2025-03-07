@@ -1,7 +1,7 @@
 <script>
     import HironoLogo from "$lib/assets/icons/hirono-logo.svg";
     import ShoppingBag from "$lib/assets/icons/shopping-bag.svg";
-    import { link } from '$app/navigation';
+    import { goto } from '$app/navigation';
     import styles from "../styles.css";
 </script>
 
