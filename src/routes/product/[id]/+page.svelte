@@ -2,20 +2,20 @@
   import ProductIMG from "$lib/assets/imgs/hirono/cuckoo.jpg";
   import { createEventDispatcher } from 'svelte';
   import { goto } from '$app/navigation'; 
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { onMount } from "svelte";
   import QuantityAdjuster from "$lib/+quantity-adjuster.svelte";
 
   export let data;
 
   $: product = data.product;
-  $: id = $page.params.id;
+  $: id = page.params.id;
   
   // Add a local variable to store quantity
   let quantity = 1;
 
   onMount(() => {
-    console.log("Page params:", $page.params);
+    console.log("Page params:", page.params);
     console.log("Product data:", product);
   });
 

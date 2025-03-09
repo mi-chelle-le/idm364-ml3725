@@ -2,13 +2,13 @@
     import HironoLogo from "$lib/assets/icons/hirono-logo.svg";
     import ShoppingBag from "$lib/assets/icons/shopping-bag.svg";
     import { goto } from '$app/navigation';
-    import styles from "../styles.css";
+    import '../styles.css';
 </script>
 
 <header>
     <nav>
         <div class="logo">
-            <a href="/" use:link>
+            <a href="/">
                 <img src={HironoLogo} alt="Hirono Logo"/>
             </a>
         </div>
@@ -20,7 +20,7 @@
             </ul>
         </div> -->
         <div class="shopping-bag">
-            <a href="/cart" use:link>
+            <a href="/cart">
                <img src={ShoppingBag} alt="Shopping Bag"/>
             </a>
         </div>
