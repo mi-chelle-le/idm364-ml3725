@@ -6,6 +6,7 @@
     --orange: #E46F20;
     --green: #737E6F;
     --charcoal: #3C3C3C;
+    --cream: #FFF8F2;
 
 
 
@@ -29,7 +30,5 @@ h1, h2, h3 {
 
 
 h1 {
-    color: white;
     font-size: 56px;
-    text-align: center;
 }
