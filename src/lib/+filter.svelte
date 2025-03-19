@@ -5,7 +5,7 @@
     import Reshape from "$lib/assets/imgs/box-reshape.png";
     import LePetitPrince from "$lib/assets/imgs/box-lepetitprince.png";
 </script>
-
+<div class="filter-container">
 <div class="filter">
     <h3>Browse by series</h3>
     <div class="filter-buttons">
@@ -41,9 +41,14 @@
         </a>
     </div>
 </div>
+</div>
 
 
 <style>
+
+    .filter-container {
+        background-color: #FFF8F2;
+    }
 
     .filter {
         max-width: 200px;
@@ -75,6 +80,7 @@
         text-align: left;
         display: flex;
         align-items: center;
+        height: 3.5rem;
     }
 
     button:hover {
@@ -93,12 +99,21 @@
     }
 
     @media (max-width: 1080px) {
+    .filter-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .filter {
-        max-width: 100%;
+        max-width: 80%;
+        text-align:center;
     }
 
     .filter-buttons {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 

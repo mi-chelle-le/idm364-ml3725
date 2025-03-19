@@ -12,13 +12,6 @@
                 <img src={HironoLogo} alt="Hirono Logo"/>
             </a>
         </div>
-        <!-- <div class="menu">
-            <ul>
-                <li><a href="/shop" use:link>shop</a></li>
-                <li><a href="/about" use:link>about</a></li>
-                <li><a href="/contact" use:link>contact</a></li>
-            </ul>
-        </div> -->
         <div class="shopping-bag">
             <a href="/cart">
                <img src={ShoppingBag} alt="Shopping Bag"/>
@@ -35,8 +28,6 @@
         border: 0.25rem solid black;
         box-shadow: 4px 4px 0px 0px #000;
         position: sticky; 
-        /* top: 2rem;       
-        z-index: 1000;    */
     }
 
     nav {
@@ -70,6 +61,7 @@
     .logo, .shopping-bag {
         width: 5rem;
         align-items: center;
+        cursor: pointer;
     }
 
     .shopping-bag {

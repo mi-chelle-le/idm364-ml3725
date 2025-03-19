@@ -1,5 +1,4 @@
 <script>
-    // Export the quantity as a prop to allow binding from parent
     export let value = 1;
     
     function increment() {
