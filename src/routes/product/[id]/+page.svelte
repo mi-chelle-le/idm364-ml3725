@@ -1,5 +1,4 @@
 <script>
-  import ProductIMG from "$lib/assets/imgs/hirono/cuckoo.jpg";
   import { createEventDispatcher } from 'svelte';
   import { goto } from '$app/navigation'; 
   import { page } from '$app/state';

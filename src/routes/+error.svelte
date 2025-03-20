@@ -2,7 +2,6 @@
     import ErrorGraphic from "$lib/assets/imgs/404-graphic.png";
     import ErrorIMG1 from "$lib/assets/imgs/404-img1.png";
     import ErrorIMG2 from "$lib/assets/imgs/404-img2.png";
-    import ErrorFooter from "$lib/assets/imgs/404-footer.jpg";
 </script>
 <div class="error-page">
     <div class="error">
