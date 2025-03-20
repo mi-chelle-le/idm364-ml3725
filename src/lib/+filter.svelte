@@ -3,6 +3,7 @@
     import LittleMischief from "$lib/assets/imgs/box-littlemischief.png";
     import MIME from "$lib/assets/imgs/box-mime.png";
     import Reshape from "$lib/assets/imgs/box-reshape.png";
+    import Shelter from "$lib/assets/imgs/box-shelter.png"
     import LePetitPrince from "$lib/assets/imgs/box-lepetitprince.png";
 </script>
 <div class="filter-container">
@@ -33,6 +34,12 @@
             Reshape
         </button>
         </a>
+        <a href=#Shelter>
+            <button>
+                <img src={Shelter} />
+                Shelter
+            </button>
+            </a>
         <a href=#Le-Petit-Prince>
         <button >
             <img src={LePetitPrince} />
