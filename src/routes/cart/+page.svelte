@@ -197,7 +197,7 @@
   }
   
   .cart-items {
-      border: 3px solid black;
+      border: 4px solid black;
       border-radius: 1rem;
       padding: 1.5rem;
       background-color: white;
@@ -280,7 +280,7 @@
   }
   
   .cart-summary {
-      border: 3px solid black;
+      border: 4px solid black;
       border-radius: 1rem;
       padding: 1.5rem;
       background-color: white;

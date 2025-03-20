@@ -202,7 +202,7 @@
     
     .checkout-form {
       padding: 2rem;
-      border: 3px solid black;
+      border: 4px solid black;
       border-radius: 1rem;
       background-color: white;
     }
@@ -236,7 +236,7 @@
     input {
       width: 100%;
       padding: 0.75rem;
-      border: 2px solid black;
+      border: 2.5px solid black;
       border-radius: 0.5rem;
       font-size: 1rem;
     }
@@ -267,7 +267,7 @@
     
     .order-summary {
       padding: 1.5rem;
-      border: 3px solid black;
+      border: 4px solid black;
       border-radius: 1rem;
       background-color: white;
       height: fit-content;
@@ -300,8 +300,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 0.25rem;
-      border: 2px solid black;
+      border-radius: 0.5rem;
+      border: 2.5px solid black;
     }
     
     .item-name {

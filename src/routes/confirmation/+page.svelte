@@ -57,7 +57,7 @@
     
     .confirmation-container {
         padding: 3rem 2rem;
-        border: 3px solid black;
+        border: 4px solid black;
         border-radius: 1rem;
         background-color: white;
         box-shadow: 4px 4px 0px 0px #000;
