@@ -81,6 +81,7 @@
         display: flex;
         align-items: center;
         height: 3.5rem;
+        color: black;
     }
 
     button:hover {

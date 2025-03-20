@@ -156,6 +156,18 @@
             display: flex;
             flex-direction: column;
         }
+
+        .header-content h1 {
+            font-size: 3rem;
+        }
+
+        .header-content h3 {
+            font-size: 1.5rem;
+        }
+
+        .header-content img {
+            max-width: 125px;
+        }
     }
 
   </style>

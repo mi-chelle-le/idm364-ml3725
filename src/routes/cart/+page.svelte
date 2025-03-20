@@ -351,6 +351,10 @@
           gap: 0 1rem;
       }
 
+      .item-details {
+        padding-left: 0.5rem;
+      }
+
       .item-total {
           grid-column: 3;
           grid-row: 1;
@@ -359,7 +363,7 @@
       .item-quantity {
           grid-column: 2;
           grid-row: 2;
-          padding-left: 1rem;
+          padding-left: 0.5rem;
       }
 
       .remove-btn {
