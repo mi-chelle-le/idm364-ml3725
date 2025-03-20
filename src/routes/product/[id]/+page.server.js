@@ -1,25 +1,5 @@
-// import {supabase} from "$lib/server/supabase_client";
-
-// export async function load() {
-//     const { data } = await supabase.from('products').select('*');
-//     return {
-//         products: data ?? []
-//     };
-// }
-
 import { supabase } from "$lib/server/supabase_client";
 import { error } from '@sveltejs/kit';
-
-// export async function load({ params }) {
-//     const { data } = await supabase
-//         .from('products')
-//         .select('*')
-//         .eq('id', params.id);  // Use eq to filter by the id parameter
-
-//     return {
-//         products: data ?? []  // Return the products, or an empty array if no data
-//     };
-// }
 
 export async function load({ params }) {
     const id = params.id;

@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import '@fortawesome/fontawesome-free/css/all.min.css'
-    
+
     let cartItems = $state([]);
     let subtotal = $state(0);
     let orderNumber = $state("");
@@ -328,7 +328,7 @@
       font-size: 1.2rem;
       margin-top: 1rem;
       padding-top: 1rem;
-      border-top: 1px solid #e0e0e0;
+      border-top: 2px solid #e0e0e0;
     }
     
     @media (max-width: 768px) {

@@ -39,12 +39,16 @@
     function saveCart() {
       localStorage.setItem('cart', JSON.stringify(cartItems));
       calculateSubtotal();
+
+        window.dispatchEvent(new CustomEvent('cartUpdated'));
     }
     
     function clearCart() {
       cartItems = [];
       localStorage.removeItem('cart');
       subtotal = 0;
+
+        window.dispatchEvent(new CustomEvent('cartUpdated'));
     }
     
     function checkout() {

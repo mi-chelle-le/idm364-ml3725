@@ -4,7 +4,7 @@
     export let title;
     export let price;
     export let showSpecialTag = false;
-    export let href = "#"; // Default to "#" if no URL is provided
+    export let href = "#";
 </script>
 
 <a href={href} class="card-link">
@@ -74,6 +74,12 @@
         font-size: 1.5rem;
         margin: 0 0 0.5rem 0;
         font-family: "Jua", sans-serif;
+        min-height: 3.6rem;
+        line-height: 1.2;
+        overflow: hidden; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .card-price {
